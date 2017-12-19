@@ -8,7 +8,8 @@
 class CompanyServiceShort : public BaseServiceShort
 {
 public:
-    CompanyServiceShort();
+    CompanyServiceShort(int id = 0, const QString& label = "", const QString& lowerPrice = "",
+                        const QString& topPrice = "", const QString& categoryName = "");
 
     const QString& categoryName() const;
     void setCategoryName(const QString &categoryName);

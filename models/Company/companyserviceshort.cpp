@@ -1,6 +1,12 @@
 #include "companyserviceshort.h"
 
-CompanyServiceShort::CompanyServiceShort()
+CompanyServiceShort::CompanyServiceShort(int id,
+                                         const QString &label,
+                                         const QString &lowerPrice,
+                                         const QString &topPrice,
+                                         const QString &categoryName) :
+    BaseServiceShort(id, label, lowerPrice, topPrice),
+    m_categoryName(categoryName)
 {
 
 }

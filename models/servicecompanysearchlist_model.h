@@ -12,9 +12,9 @@ public:
     enum CustomRoles {
         IdRole = Qt::UserRole + 1,
         LabelRole,
-        CompanyLabelRole,
         LowerPriceRole,
-        TopPriceRole
+        TopPriceRole,
+        CompanyLabelRole
     };
 
     ServiceCompanySearchListModel(QObject* parent = Q_NULLPTR);
