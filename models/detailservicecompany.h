@@ -7,9 +7,9 @@
 class DetailServiceCompany : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString label READ getLabel WRITE setLabel NOTIFY labelChanged)
-    Q_PROPERTY(QString description READ getDescription WRITE setDescription NOTIFY descriptionChanged)
-    Q_PROPERTY(QString categoryName READ getCategoryName WRITE setCategoryName NOTIFY categoryNameChanged)
+    Q_PROPERTY(const QString& label READ getLabel WRITE setLabel NOTIFY labelChanged)
+    Q_PROPERTY(const QString& description READ getDescription WRITE setDescription NOTIFY descriptionChanged)
+    Q_PROPERTY(const QString& categoryName READ getCategoryName WRITE setCategoryName NOTIFY categoryNameChanged)
     Q_PROPERTY(unsigned int categoryId READ getCategoryId WRITE setCategoryId NOTIFY categoryIdChanged)
     Q_PROPERTY(ServicePriceInfo* price READ getPrice NOTIFY priceChanged)
     Q_PROPERTY(ShortCompanyInfo* company READ getCompany NOTIFY companyChanged)

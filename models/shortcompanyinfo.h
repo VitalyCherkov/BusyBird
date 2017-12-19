@@ -8,9 +8,9 @@ class ShortCompanyInfo : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int id READ getId WRITE setId NOTIFY idChanged)
-    Q_PROPERTY(QString label READ getLabel WRITE setLabel NOTIFY labelChanged)
-    Q_PROPERTY(QString description READ getDescription WRITE setDescription NOTIFY descriptionChanged)
-    Q_PROPERTY(QString timeDescription READ getTimeDescription WRITE setTimeDescription NOTIFY timeDescriptionChanged)
+    Q_PROPERTY(const QString& label READ getLabel WRITE setLabel NOTIFY labelChanged)
+    Q_PROPERTY(const QString& description READ getDescription WRITE setDescription NOTIFY descriptionChanged)
+    Q_PROPERTY(const QString& timeDescription READ getTimeDescription WRITE setTimeDescription NOTIFY timeDescriptionChanged)
     Q_PROPERTY(DetailCompanyLocation* location READ getLocation WRITE setLocation NOTIFY locationChanged)
 public:
     ShortCompanyInfo(QObject* parent = Q_NULLPTR,
@@ -24,13 +24,13 @@ public:
     void setId(int id);
 
     const QString& getLabel() const;
-    void setLabel(const QString &label);
+    void setLabel(const QString& label);
 
     const QString& getDescription() const;
-    void setDescription(const QString &description);
+    void setDescription(const QString& description);
 
     const QString& getTimeDescription() const;
-    void setTimeDescription(const QString &timeDescription);
+    void setTimeDescription(const QString& timeDescription);
 
     DetailCompanyLocation *getLocation() const;
     void setLocation(DetailCompanyLocation *location);

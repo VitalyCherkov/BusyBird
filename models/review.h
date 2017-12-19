@@ -14,7 +14,7 @@ public:
     void setDate(const QDateTime &value);
 
     const QString& getText() const;
-    void setText(const QString &value);
+    void setText(const QString& value);
 
     float getMark() const;
     void setMark(float value);

@@ -2,8 +2,8 @@
 
 
 
-ServiceCompanyShort::ServiceCompanyShort(int id, const QString &label,
-                                         const QString &companyLabel,
+ServiceCompanyShort::ServiceCompanyShort(int id, const QString& label,
+                                         const QString& companyLabel,
                                          int lowerPrice, int topPrice) :
     id(id),
     label(label),
@@ -24,7 +24,7 @@ const QString& ServiceCompanyShort::getLabel() const {
     return label;
 }
 
-void ServiceCompanyShort::setLabel(const QString &label) {
+void ServiceCompanyShort::setLabel(const QString& label) {
     this->label = label;
 }
 
@@ -32,7 +32,7 @@ const QString& ServiceCompanyShort::getCompanyLabel() const {
     return companyLabel;
 }
 
-void ServiceCompanyShort::setCompanyLabel(const QString &companyLabel) {
+void ServiceCompanyShort::setCompanyLabel(const QString& companyLabel) {
     this->companyLabel = companyLabel;
 }
 

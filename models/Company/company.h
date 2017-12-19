@@ -5,6 +5,7 @@
 #include <QVector>
 #include <QString>
 #include "models/shortcompanyinfo.h"
+#include "legalinformation.h"
 
 class Company : public ShortCompanyInfo
 {
@@ -12,7 +13,7 @@ class Company : public ShortCompanyInfo
 public:
     Company(QObject* parent);
 private:
-    //LegalInformation* legalInformation;
+    LegalInformation* legalInformation;
     //ServicesListModel* services;
     //ContactsListModel* contacts;
 };

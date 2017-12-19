@@ -20,7 +20,7 @@ const QString& ServiceCategory::getLabel() const
     return label;
 }
 
-void ServiceCategory::setLabel(const QString &value)
+void ServiceCategory::setLabel(const QString& value)
 {
     label = value;
 }

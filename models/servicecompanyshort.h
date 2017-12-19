@@ -16,10 +16,10 @@ public:
     void setId(int id);
 
     const QString& getLabel() const;
-    void setLabel(const QString &label);
+    void setLabel(const QString& label);
 
     const QString& getCompanyLabel() const;
-    void setCompanyLabel(const QString &companyLabel);
+    void setCompanyLabel(const QString& companyLabel);
 
     int getLowerPrice() const;
     void setLowerPrice(int lowerPrice);

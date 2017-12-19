@@ -11,10 +11,10 @@ public:
     void setSource(const ContactSource &value);
 
     const QString& getDescription() const;
-    void setDescription(const QString &value);
+    void setDescription(const QString& value);
 
     const QString& getData() const;
-    void setData(const QString &value);
+    void setData(const QString& value);
 
 private:
     ContactSource source;

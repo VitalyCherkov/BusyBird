@@ -14,7 +14,7 @@ const QString& DetailServiceCompany::getLabel() const
     return m_label;
 }
 
-void DetailServiceCompany::setLabel(const QString &label)
+void DetailServiceCompany::setLabel(const QString& label)
 {
     if(m_label != label){
         m_label = label;

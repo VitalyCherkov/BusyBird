@@ -3,7 +3,7 @@
 Review::Review()
 { }
 
-Review::Review(const QString &text, float mark, int from_id, int about_id) :
+Review::Review(const QString& text, float mark, int from_id, int about_id) :
     date(QDateTime::currentDateTime()),
     text(text),
     mark(mark),
@@ -26,7 +26,7 @@ const QString& Review::getText() const
     return text;
 }
 
-void Review::setText(const QString &value)
+void Review::setText(const QString& value)
 {
     text = value;
 }

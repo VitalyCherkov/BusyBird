@@ -3,7 +3,7 @@
 ServicePriceInfo::ServicePriceInfo(QObject* parent,
                                    int lowerPrice,
                                    int topPrice,
-                                   const QString &details) :
+                                   const QString& details) :
     QObject(parent),
     m_lower(lowerPrice),
     m_top(topPrice),
@@ -39,12 +39,12 @@ void ServicePriceInfo::setTop(int top)
     }
 }
 
-const QString &ServicePriceInfo::getDetails() const
+const QString& ServicePriceInfo::getDetails() const
 {
     return m_details;
 }
 
-void ServicePriceInfo::setDetails(const QString &details)
+void ServicePriceInfo::setDetails(const QString& details)
 {
     m_details = details;
     emit detailsChanged(m_details);

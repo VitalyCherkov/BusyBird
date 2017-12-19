@@ -11,13 +11,13 @@ public:
     Client();
 
     const QString& getSecondName() const;
-    void setSecondName(const QString &value);
+    void setSecondName(const QString& value);
 
     const QString& getFirstName() const;
-    void setFirstName(const QString &value);
+    void setFirstName(const QString& value);
 
     const QString& getavatarPath() const;
-    void setavatarPath(const QString &value);
+    void setavatarPath(const QString& value);
 
     int getRateing() const;
     void setRateing(int value);

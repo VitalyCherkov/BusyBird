@@ -29,6 +29,9 @@ SOURCES += main.cpp \
     models/servicepriceinfo.cpp \
     models/shortcompanyinfo.cpp \
     models/userinterface.cpp \
+    models/Company/legalinformation.cpp \
+    models/Service/baseserviceshort.cpp \
+    models/Company/companyserviceshort.cpp
 
 RESOURCES += qml.qrc
 
@@ -59,4 +62,7 @@ HEADERS += \
     models/servicecompanyshort.h \
     models/servicepriceinfo.h \
     models/shortcompanyinfo.h \
-    models/userinterface.h
+    models/userinterface.h \
+    models/Company/legalinformation.h \
+    models/Service/baseserviceshort.h \
+    models/Company/companyserviceshort.h

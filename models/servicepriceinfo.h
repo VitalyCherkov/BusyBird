@@ -10,7 +10,7 @@ class ServicePriceInfo : public QObject
     Q_OBJECT
     Q_PROPERTY(int lower READ getLower WRITE setLower NOTIFY lowerChanged)
     Q_PROPERTY(int top READ getTop WRITE setTop NOTIFY topChanged)
-    Q_PROPERTY(QString details READ getDetails WRITE setDetails NOTIFY detailsChanged)
+    Q_PROPERTY(const QString& details READ getDetails WRITE setDetails NOTIFY detailsChanged)
 
 public:
     ServicePriceInfo(QObject* parent = Q_NULLPTR, int lowerPrice = 0, int topPrice = 0,
@@ -24,7 +24,7 @@ public:
     void setTop(int top);
 
     const QString& getDetails() const;
-    void setDetails(const QString &details);
+    void setDetails(const QString& details);
 
     void setPrice(int lower, int top);
 

@@ -12,7 +12,7 @@ public:
     void setId(int value);
 
     const QString& getLabel() const;
-    void setLabel(const QString &value);
+    void setLabel(const QString& value);
 
 private:
     int id;
