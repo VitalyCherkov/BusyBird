@@ -18,7 +18,6 @@ SOURCES += main.cpp \
     models/Company/detailcompanylocation.cpp \
     models/categorieslistmodel.cpp \
     models/client.cpp \
-    models/detailservicecompany.cpp \
     models/review.cpp \
     models/servicecategory.cpp \
     models/servicecompanysearchlist_model.cpp \
@@ -33,7 +32,8 @@ SOURCES += main.cpp \
     models/Contact/contact.cpp \
     models/Contact/contactslistmodel.cpp \
     models/Service/priceinfo.cpp \
-    models/Service/baseservicedetail.cpp
+    models/Service/baseservicedetail.cpp \
+    models/servicedetail.cpp
 
 RESOURCES += qml.qrc
 
@@ -54,7 +54,6 @@ HEADERS += \
     models/Company/detailcompanylocation.h \
     models/categorieslistmodel.h \
     models/client.h \
-    models/detailservicecompany.h \
     models/review.h \
     models/servicecategory.h \
     models/servicecompanysearchlist_model.h \
@@ -69,4 +68,5 @@ HEADERS += \
     models/Contact/contact.h \
     models/Contact/contactslistmodel.h \
     models/Service/priceinfo.h \
-    models/Service/baseservicedetail.h
+    models/Service/baseservicedetail.h \
+    models/servicedetail.h

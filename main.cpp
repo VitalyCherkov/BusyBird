@@ -3,13 +3,13 @@
 #include <QQmlApplicationEngine>
 #include "models/categorieslistmodel.h"
 #include "models/servicecompanysearchlist_model.h"
-#include "models/detailservicecompany.h"
+#include "models/servicedetail.h"
 
 int main(int argc, char *argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
-    DetailServiceCompany* curService = new DetailServiceCompany();
+    ServiceDetail* curService = new ServiceDetail();
     curService->setCategoryId(1);
     curService->setCategoryName("Category Name");
     curService->setDescription("Very very very long description of that company");
@@ -35,8 +35,9 @@ int main(int argc, char *argv[]) {
     companyLocation->setAddress("Moscow, Izmailovskiy prospekt, 73/2");
     curCompanyForService->setLocation(companyLocation);
 
+    qmlRegisterUncreatableType <BaseServiceDetail>("loadedService", 1, 0, "LoadedServiceCompanyBase", "");
     qmlRegisterUncreatableType <DetailCompanyLocation>("loadedService", 1, 0, "LoadedServiceCompanyLocation", "");
-    qmlRegisterUncreatableType <DetailServiceCompany>("loadedService", 1, 0, "LoadedService", "");
+    qmlRegisterUncreatableType <ServiceDetail>("loadedService", 1, 0, "LoadedService", "");
     qmlRegisterUncreatableType <ShortCompanyInfo> ("loadedService", 1, 0, "LoadedServiceCompany", "");
     qmlRegisterUncreatableType <PriceInfo> ("loadedService", 1, 0, "LoadedServicePrice", "");
 
