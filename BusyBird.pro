@@ -31,7 +31,10 @@ SOURCES += main.cpp \
     models/Contact/contactslistmodel.cpp \
     models/Service/priceinfo.cpp \
     models/Service/baseservicedetail.cpp \
-    models/Service/servicedetail.cpp
+    models/Service/servicedetail.cpp \
+    models/Filters/filters.cpp \
+    controllers/ServicesControllers/servicescontroller.cpp \
+    controllers/abstractcontroller.cpp
 
 RESOURCES += qml.qrc
 
@@ -65,4 +68,7 @@ HEADERS += \
     models/Contact/contactslistmodel.h \
     models/Service/priceinfo.h \
     models/Service/baseservicedetail.h \
-    models/Service/servicedetail.h
+    models/Service/servicedetail.h \
+    models/Filters/filters.h \
+    controllers/ServicesControllers/servicescontroller.h \
+    controllers/abstractcontroller.h
