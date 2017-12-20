@@ -3,7 +3,7 @@
 #include <QQmlApplicationEngine>
 #include "models/categorieslistmodel.h"
 #include "models/servicecompanysearchlist_model.h"
-#include "models/servicedetail.h"
+#include "models/Service/servicedetail.h"
 
 int main(int argc, char *argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);

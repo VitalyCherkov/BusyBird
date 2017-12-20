@@ -1,8 +1,8 @@
 #ifndef SERVICECOMPANYDETAIL_H
 #define SERVICECOMPANYDETAIL_H
 
-#include "shortcompanyinfo.h"
-#include "Service/baseservicedetail.h"
+#include "../shortcompanyinfo.h"
+#include "baseservicedetail.h"
 
 class ServiceDetail : public BaseServiceDetail
 {
