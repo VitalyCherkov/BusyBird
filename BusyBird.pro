@@ -17,8 +17,6 @@ SOURCES += main.cpp \
     models/Company/company.cpp \
     models/Company/detailcompanylocation.cpp \
     models/categorieslistmodel.cpp \
-    models/client.cpp \
-    models/review.cpp \
     models/servicecategory.cpp \
     models/servicecompanysearchlist_model.cpp \
     models/servicecompanyshort.cpp \
@@ -53,8 +51,6 @@ HEADERS += \
     models/Company/company.h \
     models/Company/detailcompanylocation.h \
     models/categorieslistmodel.h \
-    models/client.h \
-    models/review.h \
     models/servicecategory.h \
     models/servicecompanysearchlist_model.h \
     models/servicecompanyshort.h \
