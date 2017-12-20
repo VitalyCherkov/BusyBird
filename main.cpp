@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     curCompanyForService->setTimeDescription("Every day. 8:00 - 22:00");
     curService->setCompany(curCompanyForService);
 
-    ServicePriceInfo* servicePrice = new ServicePriceInfo();
+    PriceInfo* servicePrice = new PriceInfo();
     servicePrice->setLower(10000);
     servicePrice->setTop(15000);
     servicePrice->setDetails("Some details");
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     qmlRegisterUncreatableType <DetailCompanyLocation>("loadedService", 1, 0, "LoadedServiceCompanyLocation", "");
     qmlRegisterUncreatableType <DetailServiceCompany>("loadedService", 1, 0, "LoadedService", "");
     qmlRegisterUncreatableType <ShortCompanyInfo> ("loadedService", 1, 0, "LoadedServiceCompany", "");
-    qmlRegisterUncreatableType <ServicePriceInfo> ("loadedService", 1, 0, "LoadedServicePrice", "");
+    qmlRegisterUncreatableType <PriceInfo> ("loadedService", 1, 0, "LoadedServicePrice", "");
 
     qmlRegisterType <CategoriesListModel> ("test", 1, 0, "CategoriesList");
     qmlRegisterType <ServiceCompanySearchListModel> ("test", 1, 0, "ServicesList");

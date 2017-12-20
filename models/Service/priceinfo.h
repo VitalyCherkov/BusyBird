@@ -5,7 +5,7 @@
 #include <QString>
 #include <QMetaType>
 
-class ServicePriceInfo : public QObject
+class PriceInfo : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int lower READ getLower WRITE setLower NOTIFY lowerChanged)
@@ -13,9 +13,9 @@ class ServicePriceInfo : public QObject
     Q_PROPERTY(const QString& details READ getDetails WRITE setDetails NOTIFY detailsChanged)
 
 public:
-    ServicePriceInfo(QObject* parent = Q_NULLPTR, int lowerPrice = 0, int topPrice = 0,
+    PriceInfo(QObject* parent = Q_NULLPTR, int lowerPrice = 0, int topPrice = 0,
                      const QString& details = "");
-    virtual ~ServicePriceInfo() = default;
+    virtual ~PriceInfo() = default;
 
     int getLower() const;
     void setLower(int lower);

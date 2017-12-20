@@ -61,12 +61,12 @@ void DetailServiceCompany::setCategoryId(unsigned int categoryId)
     }
 }
 
-ServicePriceInfo *DetailServiceCompany::getPrice() const
+PriceInfo *DetailServiceCompany::getPrice() const
 {
     return m_price;
 }
 
-void DetailServiceCompany::setPrice(ServicePriceInfo* price)
+void DetailServiceCompany::setPrice(PriceInfo* price)
 {
     if(price && price != m_price) {
         if(m_price) m_price->setParent(Q_NULLPTR);

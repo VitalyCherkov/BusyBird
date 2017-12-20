@@ -24,7 +24,7 @@ QVariant ServiceCompanySearchListModel::data(const QModelIndex &index, int role)
     if(!index.isValid())
         return QVariant();
 
-    if(index.row() > services.count())
+    if(index.row() >= services.count())
         return QVariant();
 
     const ServiceCompanyShort& curService = services[index.row()];

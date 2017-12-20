@@ -1,6 +1,6 @@
-#include "servicepriceinfo.h"
+#include "priceinfo.h"
 
-ServicePriceInfo::ServicePriceInfo(QObject* parent,
+PriceInfo::PriceInfo(QObject* parent,
                                    int lowerPrice,
                                    int topPrice,
                                    const QString& details) :
@@ -11,12 +11,12 @@ ServicePriceInfo::ServicePriceInfo(QObject* parent,
 {
 }
 
-int ServicePriceInfo::getLower() const
+int PriceInfo::getLower() const
 {
     return m_lower;
 }
 
-void ServicePriceInfo::setLower(int lower)
+void PriceInfo::setLower(int lower)
 {
     if(lower >= 0) {
         m_lower = lower;
@@ -25,12 +25,12 @@ void ServicePriceInfo::setLower(int lower)
     }
 }
 
-int ServicePriceInfo::getTop() const
+int PriceInfo::getTop() const
 {
     return m_top;
 }
 
-void ServicePriceInfo::setTop(int top)
+void PriceInfo::setTop(int top)
 {
     if(top >= 0) {
         m_top = top;
@@ -39,19 +39,19 @@ void ServicePriceInfo::setTop(int top)
     }
 }
 
-const QString& ServicePriceInfo::getDetails() const
+const QString& PriceInfo::getDetails() const
 {
     return m_details;
 }
 
-void ServicePriceInfo::setDetails(const QString& details)
+void PriceInfo::setDetails(const QString& details)
 {
     m_details = details;
     emit detailsChanged(m_details);
 }
 
 
-void ServicePriceInfo::setPrice(int lowerPrice, int topPrice)
+void PriceInfo::setPrice(int lowerPrice, int topPrice)
 {
     if(lowerPrice >= 0 && topPrice >= 0) {
         m_lower = lowerPrice;
