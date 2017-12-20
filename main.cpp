@@ -2,50 +2,47 @@
 #include <QtQml>
 #include <QQmlApplicationEngine>
 #include "models/categorieslistmodel.h"
-#include "models/servicecompanysearchlist_model.h"
+#include "models/servicelistmodel.h"
 #include "models/Service/servicedetail.h"
+#include "controllers/ServicesControllers/servicescontroller.h"
+#include "controllers/ServicesControllers/servicedetailcontroller.h"
 
 int main(int argc, char *argv[]) {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
 
     ServiceDetail* curService = new ServiceDetail();
-    curService->setCategoryId(1);
-    curService->setCategoryName("Category Name");
-    curService->setDescription("Very very very long description of that company");
-    curService->setLabel("Service Label");
-
 
     ShortCompanyInfo* curCompanyForService = new ShortCompanyInfo();
-    curCompanyForService->setId(5);
-    curCompanyForService->setLabel("The best COMPANY");
-    curCompanyForService->setDescription("Very very very long description of this company, but really not very long");
-    curCompanyForService->setTimeDescription("Every day. 8:00 - 22:00");
     curService->setCompany(curCompanyForService);
 
     PriceInfo* servicePrice = new PriceInfo();
-    servicePrice->setLower(10000);
-    servicePrice->setTop(15000);
-    servicePrice->setDetails("Some details");
     curService->setPrice(servicePrice);
 
     DetailCompanyLocation* companyLocation = new DetailCompanyLocation();
-    companyLocation->setRegion("Moscow");
-    companyLocation->setDistrict("Izmailovo");
-    companyLocation->setAddress("Moscow, Izmailovskiy prospekt, 73/2");
     curCompanyForService->setLocation(companyLocation);
 
-    qmlRegisterUncreatableType <BaseServiceDetail>("loadedService", 1, 0, "LoadedServiceCompanyBase", "");
+    qmlRegisterType <BaseServiceDetail>("loadedService", 1, 0, "LoadedServiceCompanyBase");
+    qmlRegisterType <PriceInfo> ("loadedService", 1, 0, "LoadedServicePrice");
     qmlRegisterUncreatableType <DetailCompanyLocation>("loadedService", 1, 0, "LoadedServiceCompanyLocation", "");
-    qmlRegisterUncreatableType <ServiceDetail>("loadedService", 1, 0, "LoadedService", "");
+    qmlRegisterUncreatableType <ServiceDetail>("loadedService", 1, 0, "ServiceDetail", "");
     qmlRegisterUncreatableType <ShortCompanyInfo> ("loadedService", 1, 0, "LoadedServiceCompany", "");
-    qmlRegisterUncreatableType <PriceInfo> ("loadedService", 1, 0, "LoadedServicePrice", "");
+
+    // Контроллеры
+    qmlRegisterUncreatableType <ServicesController>("controllers", 1, 0, "ServicesListController", "");
+    qmlRegisterUncreatableType <ServiceDetailController>("controllers", 1, 0, "ServicesDetailController", "");
 
     qmlRegisterType <CategoriesListModel> ("test", 1, 0, "CategoriesList");
-    qmlRegisterType <ServiceCompanySearchListModel> ("test", 1, 0, "ServicesList");
+    qmlRegisterType <ServiceListModel> ("test", 1, 0, "ServicesList");
+    qmlRegisterType <CompanyServicesListModel> ("test", 1, 0, "CompanyServicesList");
+
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("loadedService", curService);
+    engine.rootContext()->setContextProperty("servicesListController",
+                                             ServicesController::getInstance());
+    engine.rootContext()->setContextProperty("serviceDetailController",
+                                             ServiceDetailController::getInstance());
 
     engine.load(QUrl(QLatin1String("qrc:/qml/main.qml")));
     if (engine.rootObjects().isEmpty())

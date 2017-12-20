@@ -7,7 +7,7 @@ class BaseServiceShort
 {
 public:
     BaseServiceShort(int id = 0, const QString& label = "",
-                     const QString& lowerPrice = "", const QString& topPrice = "");
+                     int lowerPrice = 0, int topPrice = 0);
     virtual ~BaseServiceShort() = default;
 
     int getId() const;
@@ -16,17 +16,17 @@ public:
     const QString& getLabel() const;
     void setLabel(const QString& getLabel);
 
-    const QString& getLowerPrice() const;
-    void setLowerPrice(const QString& getLowerPrice);
+    int getLowerPrice() const;
+    void setLowerPrice(int lowerPrice);
 
-    const QString& getTopPrice() const;
-    void setTopPrice(const QString& getTopPrice);
+    int getTopPrice() const;
+    void setTopPrice(int topPrice);
 
 protected:
     int m_id;
     QString m_label;
-    QString m_lowerPrice;
-    QString m_topPrice;
+    int m_lowerPrice;
+    int m_topPrice;
 };
 
 #endif // BASESERVICE_H

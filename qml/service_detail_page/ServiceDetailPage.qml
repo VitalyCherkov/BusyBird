@@ -6,10 +6,12 @@ import "../circled_image"
 import "../header_toolbar"
 import "../delegates"
 import "../page_template"
+import loadedService 1.0
 
 ScrollablePage {
     id: serviceDetailPage
-    pageTitle: loadedService.label
+    property ServiceDetail currentService : loadedService
+    pageTitle: currentService.label
     pageContent: Component {
         ColumnLayout {
             id: serviceDetailPageContent
@@ -22,14 +24,14 @@ ScrollablePage {
 
             ServiceOnlyInfo {
                 id: serviceOnlyInfo
-                currentService: loadedService
+                currentService: serviceDetailPage.currentService
 
             }
 
             CompanyInfo {
                 id: companyInfo
                 currentStackView: serviceDetailPage.currentStackView
-                currentShortCompany: loadedService.company
+                currentShortCompany: currentService.company
             }
 
         }

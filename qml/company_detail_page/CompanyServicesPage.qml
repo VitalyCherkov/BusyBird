@@ -3,15 +3,20 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 import test 1.0
+import controllers 1.0
 import "../header_toolbar"
 import "../page_template"
 
 UnscrollablePage {
     id: companyServicesPage
+    property CompanyServicesList services: CompanyServicesList {}
     pageTitle: "Услуги компании"
     pageContent: Component {
         ListView {
-            model: ServicesList {}
+            model: {
+                servicesListController.loadCompanyServices(services, 5)
+                return services
+            }
             anchors.fill: parent
             anchors.topMargin: 10
             anchors.bottomMargin: 10

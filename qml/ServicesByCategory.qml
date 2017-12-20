@@ -10,6 +10,7 @@ Page {
 
     property string categoryName
     property StackView currentStackView
+    property ServicesList servies: ServicesList{}
 
     header: HeaderToolBar {
 
@@ -31,15 +32,19 @@ Page {
             anchors.rightMargin: 10
             anchors.verticalCenter: parent.verticalCenter
 
-            onClicked: currentStackView.push("qrc:/qml/ServicesFilters.qml", {currentStackView :
-                                                 servicesByCategory.currentStackView})
+            onClicked: currentStackView.push("qrc:/qml/ServicesFilters.qml",
+                                             {currentStackView : servicesByCategory.currentStackView})
         }
     }
 
     ListView {
+
         id: servicesByCategoryListView
         anchors.fill: parent
-        model: ServicesList { }
+        model: {
+            servicesListController.loadServices(servies)
+            return servies
+        }
         topMargin: 10
         bottomMargin: 10
         spacing: 10

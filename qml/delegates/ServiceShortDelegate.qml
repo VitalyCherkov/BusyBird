@@ -6,8 +6,8 @@ import QtQuick.Controls.Material 2.2
 ItemDelegate {
     property string title
     property string subtitle
-    property real lowerPrice
-    property real topPrice
+    property int lowerPrice
+    property int topPrice
 
     anchors.left: parent.left
     anchors.right: parent.right

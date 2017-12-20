@@ -30,7 +30,7 @@ public:
     void setCategoryId(unsigned int getCategoryId);
 
     PriceInfo* getPrice() const;
-    void setPrice(PriceInfo* price);
+    Q_INVOKABLE void setPrice(PriceInfo* price);
 
     bool getIsFavourite() const;
     void setIsFavourite(bool isFavourite);

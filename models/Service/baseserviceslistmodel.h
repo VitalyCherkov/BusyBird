@@ -19,7 +19,7 @@ public:
     BaseServicesListModel(QObject* parent = Q_NULLPTR);
     virtual ~BaseServicesListModel() = default;
     QVariant data(const QModelIndex &index, int role) const;
-
+    Qt::ItemFlags flags(const QModelIndex & index) const;
 protected:
     QHash <int, QByteArray> roleNames() const;
     virtual const BaseServiceShort* getElement(int index) const = 0;

@@ -11,7 +11,7 @@ Pane {
     ServiceShortDelegate {
         id: companyServiceShortDelegateId
         title: model.label
-        subtitle: model.companyLabel
+        subtitle: model.categoryName
         lowerPrice: model.lowerPrice
         topPrice: model.topPrice
         onClicked: {

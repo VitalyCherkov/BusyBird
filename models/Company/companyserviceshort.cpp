@@ -2,16 +2,18 @@
 
 CompanyServiceShort::CompanyServiceShort(int id,
                                          const QString &label,
-                                         const QString &lowerPrice,
-                                         const QString &topPrice,
-                                         const QString &categoryName) :
+                                         int lowerPrice,
+                                         int topPrice,
+                                         const QString &categoryName,
+                                         int categoryId) :
     BaseServiceShort(id, label, lowerPrice, topPrice),
-    m_categoryName(categoryName)
+    m_categoryName(categoryName),
+    m_categoryId(categoryId)
 {
 
 }
 
-const QString& CompanyServiceShort::categoryName() const
+const QString& CompanyServiceShort::getCategoryName() const
 {
     return m_categoryName;
 }
@@ -19,4 +21,14 @@ const QString& CompanyServiceShort::categoryName() const
 void CompanyServiceShort::setCategoryName(const QString& categoryName)
 {
     m_categoryName = categoryName;
+}
+
+int CompanyServiceShort::getCategoryId() const
+{
+    return m_categoryId;
+}
+
+void CompanyServiceShort::setCategoryId(int categoryId)
+{
+    m_categoryId = categoryId;
 }

@@ -39,3 +39,8 @@ QVariant BaseServicesListModel::data(const QModelIndex &index, int role) const
 
     return QVariant();
 }
+
+Qt::ItemFlags BaseServicesListModel::flags(const QModelIndex &index) const
+{
+    return Qt::ItemIsEditable | QAbstractListModel::flags(index);
+}

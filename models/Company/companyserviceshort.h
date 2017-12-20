@@ -8,14 +8,18 @@
 class CompanyServiceShort : public BaseServiceShort
 {
 public:
-    CompanyServiceShort(int id = 0, const QString& label = "", const QString& lowerPrice = "",
-                        const QString& topPrice = "", const QString& categoryName = "");
+    CompanyServiceShort(int id = 0, const QString& label = "", int lowerPrice = 0,
+                        int topPrice = 0, const QString& categoryName = "", int categoryId = 0);
 
-    const QString& categoryName() const;
+    const QString& getCategoryName() const;
     void setCategoryName(const QString &categoryName);
+
+    int getCategoryId() const;
+    void setCategoryId(int categoryId);
 
 private:
     QString m_categoryName;
+    int m_categoryId;
 };
 
 Q_DECLARE_METATYPE(CompanyServiceShort)

@@ -1,4 +1,5 @@
 #include "categorieslistmodel.h"
+#include <QDebug>
 
 
 CategoriesListModel::CategoriesListModel(QObject *parent) :
@@ -6,6 +7,7 @@ CategoriesListModel::CategoriesListModel(QObject *parent) :
 {
     for(int i = 0; i < 10; i++)
         this->categories.push_back(ServiceCategory(i, QString("Category %1").arg(i)));
+
 }
 
 int CategoriesListModel::rowCount(const QModelIndex &parent) const

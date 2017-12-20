@@ -29,8 +29,5 @@ Page {
         anchors.left: parent.left
         anchors.right: parent.right
         sourceComponent: pageContent
-        onLoaded: {
-            console.log(implicitHeight)
-        }
     }
 }

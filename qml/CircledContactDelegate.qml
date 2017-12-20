@@ -3,6 +3,8 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 import "circled_image"
+import controllers 1.0
+import test 1.0
 
 ItemDelegate {
     property StackView currentStackView
@@ -25,8 +27,11 @@ ItemDelegate {
         anchors.leftMargin: aroundSpacing
     }
 
-    onClicked: currentStackView.push("qrc:/qml/ServicesByCategory.qml", {
+    onClicked: {
+        currentStackView.push("qrc:/qml/ServicesByCategory.qml", {
                                          categoryName: label,
                                          currentStackView : circledContactDelegate.currentStackView
-                                     })
+                                     }
+                              )
+    }
 }

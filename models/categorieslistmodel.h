@@ -14,7 +14,7 @@ public:
         LabelRole
     };
 
-    CategoriesListModel(QObject* parent = nullptr);
+    CategoriesListModel(QObject* parent = Q_NULLPTR);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const;
     QVariant data(const QModelIndex &index, int role) const;

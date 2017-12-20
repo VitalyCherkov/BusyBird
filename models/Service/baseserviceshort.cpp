@@ -1,6 +1,6 @@
 #include "baseserviceshort.h"
 
-BaseServiceShort::BaseServiceShort(int id, const QString& label, const QString& lowerPrice, const QString& topPrice) :
+BaseServiceShort::BaseServiceShort(int id, const QString& label, int lowerPrice, int topPrice) :
     m_id(id),
     m_label(label),
     m_lowerPrice(lowerPrice),
@@ -27,22 +27,22 @@ void BaseServiceShort::setLabel(const QString& label)
     m_label = label;
 }
 
-const QString& BaseServiceShort::getLowerPrice() const
+int BaseServiceShort::getLowerPrice() const
 {
     return m_lowerPrice;
 }
 
-void BaseServiceShort::setLowerPrice(const QString& lowerPrice)
+void BaseServiceShort::setLowerPrice(int lowerPrice)
 {
     m_lowerPrice = lowerPrice;
 }
 
-const QString& BaseServiceShort::getTopPrice() const
+int BaseServiceShort::getTopPrice() const
 {
     return m_topPrice;
 }
 
-void BaseServiceShort::setTopPrice(const QString& topPrice)
+void BaseServiceShort::setTopPrice(int topPrice)
 {
     m_topPrice = topPrice;
 }

@@ -18,8 +18,6 @@ SOURCES += main.cpp \
     models/Company/detailcompanylocation.cpp \
     models/categorieslistmodel.cpp \
     models/servicecategory.cpp \
-    models/servicecompanysearchlist_model.cpp \
-    models/servicecompanyshort.cpp \
     models/shortcompanyinfo.cpp \
     models/userinterface.cpp \
     models/Company/legalinformation.cpp \
@@ -34,7 +32,10 @@ SOURCES += main.cpp \
     models/Service/servicedetail.cpp \
     models/Filters/filters.cpp \
     controllers/ServicesControllers/servicescontroller.cpp \
-    controllers/abstractcontroller.cpp
+    controllers/abstractcontroller.cpp \
+    controllers/ServicesControllers/servicedetailcontroller.cpp \
+    models/serviceshort.cpp \
+    models/servicelistmodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -55,8 +56,6 @@ HEADERS += \
     models/Company/detailcompanylocation.h \
     models/categorieslistmodel.h \
     models/servicecategory.h \
-    models/servicecompanysearchlist_model.h \
-    models/servicecompanyshort.h \
     models/shortcompanyinfo.h \
     models/userinterface.h \
     models/Company/legalinformation.h \
@@ -71,4 +70,7 @@ HEADERS += \
     models/Service/servicedetail.h \
     models/Filters/filters.h \
     controllers/ServicesControllers/servicescontroller.h \
-    controllers/abstractcontroller.h
+    controllers/abstractcontroller.h \
+    controllers/ServicesControllers/servicedetailcontroller.h \
+    models/serviceshort.h \
+    models/servicelistmodel.h
