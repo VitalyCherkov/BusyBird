@@ -6,7 +6,7 @@ import "../circled_image"
 import "../header_toolbar"
 import "../delegates"
 import "../page_template"
-import loadedService 1.0
+import loadedModels 1.0
 
 ScrollablePage {
     id: serviceDetailPage

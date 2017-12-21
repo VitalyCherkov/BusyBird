@@ -19,7 +19,7 @@ Rectangle {
         anchors.right: parent.right
         id: serviceDescriptionText
         wrapMode: Text.WordWrap
-        text: description //loadedService.description
+        text: description
         anchors.leftMargin: 20
         anchors.rightMargin: 10
     }

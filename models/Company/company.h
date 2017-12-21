@@ -4,12 +4,12 @@
 #include <QObject>
 #include <QVector>
 #include <QString>
-#include "models/shortcompanyinfo.h"
+#include "companyshort.h"
 #include "legalinformation.h"
 #include "companyserviceslistmodel.h"
 #include "models/Contact/contactslistmodel.h"
 
-class Company : public ShortCompanyInfo
+class Company : public CompanyShort
 {
     Q_OBJECT
     Q_PROPERTY(LegalInformation legalInformation READ getLegalInformation NOTIFY legalInformationChanged)

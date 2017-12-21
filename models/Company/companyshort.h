@@ -4,7 +4,7 @@
 #include <QString>
 #include "models/Company/detailcompanylocation.h"
 
-class ShortCompanyInfo : public QObject
+class CompanyShort : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(int id READ getId WRITE setId NOTIFY idChanged)
@@ -13,12 +13,12 @@ class ShortCompanyInfo : public QObject
     Q_PROPERTY(const QString& timeDescription READ getTimeDescription WRITE setTimeDescription NOTIFY timeDescriptionChanged)
     Q_PROPERTY(DetailCompanyLocation* location READ getLocation WRITE setLocation NOTIFY locationChanged)
 public:
-    ShortCompanyInfo(QObject* parent = Q_NULLPTR,
+    CompanyShort(QObject* parent = Q_NULLPTR,
                      int id = 0, const QString& label = "",
                      const QString& description = "",
                      DetailCompanyLocation* location = Q_NULLPTR);
 
-    virtual ~ShortCompanyInfo() = default;
+    virtual ~CompanyShort() = default;
 
     int getId() const;
     void setId(int id);

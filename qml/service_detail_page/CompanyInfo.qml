@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 import "../circled_image"
 import "../delegates"
-import loadedService 1.0
+import loadedModels 1.0
 
 //  Компания
 //      Заголовок

@@ -2,7 +2,7 @@
 
 
 Company::Company(QObject *parent) :
-    ShortCompanyInfo(parent),
+    CompanyShort(parent),
     m_legalInformation(Q_NULLPTR),
     m_services(Q_NULLPTR),
     m_contacts(Q_NULLPTR)

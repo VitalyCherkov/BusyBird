@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 import "../circled_image"
-import loadedService 1.0
+import loadedModels 1.0
 
 //  Цена услуги
 //      Цена от до

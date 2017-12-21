@@ -6,12 +6,12 @@ ServiceDetail::ServiceDetail(QObject *parent) :
 {
 
 }
-ShortCompanyInfo* ServiceDetail::getCompany() const
+CompanyShort* ServiceDetail::getCompany() const
 {
     return m_company;
 }
 
-void ServiceDetail::setCompany(ShortCompanyInfo* company)
+void ServiceDetail::setCompany(CompanyShort* company)
 {
     if(company && company != m_company) {
         if(m_company) m_company->setParent(Q_NULLPTR);

@@ -1,24 +1,24 @@
 #ifndef SERVICECOMPANYDETAIL_H
 #define SERVICECOMPANYDETAIL_H
 
-#include "../shortcompanyinfo.h"
+#include "models/Company/companyshort.h"
 #include "baseservicedetail.h"
 
 class ServiceDetail : public BaseServiceDetail
 {
     Q_OBJECT
-    Q_PROPERTY(ShortCompanyInfo* company READ getCompany NOTIFY companyChanged)
+    Q_PROPERTY(CompanyShort* company READ getCompany NOTIFY companyChanged)
 public:
     ServiceDetail(QObject* parent = Q_NULLPTR);
 
-    ShortCompanyInfo* getCompany() const;
-    void setCompany(ShortCompanyInfo* company);
+    CompanyShort* getCompany() const;
+    void setCompany(CompanyShort* company);
 
 signals:
-    void companyChanged(ShortCompanyInfo*);
+    void companyChanged(CompanyShort*);
 
 private:
-    ShortCompanyInfo* m_company;
+    CompanyShort* m_company;
 };
 
 #endif // SERVICECOMPANYDETAIL_H

@@ -3,7 +3,7 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 import "../service_detail_page"
-import loadedService 1.0
+import loadedModels 1.0
 
 Pane {
     height: companyServiceDetailDelegateId.implicitHeight + closeBtnId.height
