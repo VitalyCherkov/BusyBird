@@ -9,7 +9,7 @@ import "../page_template"
 
 UnscrollablePage {
     id: companyServicesPage
-    property CompanyServicesList services: CompanyServicesList {}
+    property CompanyServicesListModel services: CompanyServicesListModel {}
     pageTitle: "Услуги компании"
     pageContent: Component {
         ListView {

@@ -18,7 +18,7 @@ Page {
         topMargin: 10
         bottomMargin: 10
         spacing: 10
-        model: CategoriesList { }
+        model: CategoriesListModel { }
 
         delegate: CircledContactDelegate {
             currentStackView: categoryListPage.currentStackView

@@ -9,7 +9,7 @@ Pane {
     height: companyServiceDetailDelegateId.implicitHeight + closeBtnId.height
     padding: 0
     Material.elevation: 2
-    property LoadedServiceCompanyBase curService : LoadedServiceCompanyBase {}
+    property BaseServiceDetail curService : BaseServiceDetail {}
     ServiceOnlyInfo {
         id: companyServiceDetailDelegateId
         anchors.top: parent.top

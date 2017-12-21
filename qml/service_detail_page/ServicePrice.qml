@@ -10,7 +10,7 @@ import loadedModels 1.0
 //      Подробности ценообразования
 
 Pane {
-    property LoadedServicePrice currentServicePrice
+    property PriceInfo currentServicePrice
 
     Material.elevation: 1
     anchors.left: parent.left

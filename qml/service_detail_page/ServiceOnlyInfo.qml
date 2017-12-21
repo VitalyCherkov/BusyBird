@@ -8,7 +8,7 @@ import "../delegates"
 import loadedModels 1.0
 
 ColumnLayout {
-    property LoadedServiceCompanyBase currentService
+    property BaseServiceDetail currentService
 
     id: serviceOnlyInfo
     anchors.left: parent.left

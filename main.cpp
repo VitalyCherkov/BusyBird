@@ -21,20 +21,20 @@ int main(int argc, char *argv[]) {
     DetailCompanyLocation* companyLocation = new DetailCompanyLocation();
     curCompanyForService->setLocation(companyLocation);
 
-    qmlRegisterType <BaseServiceDetail>("loadedModels", 1, 0, "LoadedServiceCompanyBase");
-    qmlRegisterType <PriceInfo> ("loadedModels", 1, 0, "LoadedServicePrice");
-    qmlRegisterUncreatableType <DetailCompanyLocation>("loadedModels", 1, 0, "LoadedServiceCompanyLocation", "");
+    qmlRegisterType <BaseServiceDetail>("loadedModels", 1, 0, "BaseServiceDetail");
+    qmlRegisterType <PriceInfo> ("loadedModels", 1, 0, "PriceInfo");
+    qmlRegisterUncreatableType <DetailCompanyLocation>("loadedModels", 1, 0, "DetailCompanyLocation", "");
     qmlRegisterUncreatableType <ServiceDetail>("loadedModels", 1, 0, "ServiceDetail", "");
-    qmlRegisterUncreatableType <CompanyShort> ("loadedModels", 1, 0, "LoadedServiceCompany", "");
-    qmlRegisterUncreatableType <Company> ("loadedModels", 1, 0, "LoadedCompany", "");
+    qmlRegisterType <CompanyShort> ("loadedModels", 1, 0, "CompanyShort");
+    qmlRegisterUncreatableType <Company> ("loadedModels", 1, 0, "CompanyDetail", "");
 
     // Контроллеры
     qmlRegisterUncreatableType <ServicesController>("controllers", 1, 0, "ServicesListController", "");
     qmlRegisterUncreatableType <ServiceDetailController>("controllers", 1, 0, "ServiceDetailController", "");
 
-    qmlRegisterType <CategoriesListModel> ("test", 1, 0, "CategoriesList");
-    qmlRegisterType <ServiceListModel> ("test", 1, 0, "ServicesList");
-    qmlRegisterType <CompanyServicesListModel> ("test", 1, 0, "CompanyServicesList");
+    qmlRegisterType <CategoriesListModel> ("test", 1, 0, "CategoriesListModel");
+    qmlRegisterType <ServiceListModel> ("test", 1, 0, "ServicesListModel");
+    qmlRegisterType <CompanyServicesListModel> ("test", 1, 0, "CompanyServicesListModel");
 
 
     QQmlApplicationEngine engine;

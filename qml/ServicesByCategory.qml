@@ -10,7 +10,7 @@ Page {
 
     property string categoryName
     property StackView currentStackView
-    property ServicesList servies: ServicesList{}
+    property ServicesListModel servies: ServicesListModel{}
 
     header: HeaderToolBar {
 

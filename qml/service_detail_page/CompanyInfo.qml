@@ -17,7 +17,7 @@ import loadedModels 1.0
 Pane {
     id: companyInfo
     property StackView currentStackView
-    property LoadedServiceCompany currentShortCompany
+    property CompanyShort currentShortCompany
     Material.elevation: 1
     anchors.left: parent.left
     anchors.right: parent.right
